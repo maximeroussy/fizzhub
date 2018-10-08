@@ -45,14 +45,23 @@ The project is split into 5 distinct modules. By having multiple modules we gain
 The **/extras/** folder in the branch contains all these screenshots as well as two videos showcasing/demo-ing the application. Here's a quick rundown of the application's 5 different screens:
 
 <img src="./extras/device-2018-09-24-231610.png" width="200px"/><img src="./extras/device-2018-09-24-230330.png" width="200px"/><img src="./extras/device-2018-09-24-231554.png" width="200px"/>
+
 **Repository List** (RepositoryListFragment) - The first screen that opens when the app is launched and is one of the two main screens (hosted by MainActivity). This screen displays all of the user's currently saved/tracked repositories.
+
 <img src="./extras/device-2018-09-24-231618.png" width="200px"/><img src="./extras/device-2018-09-24-230419.png" width="200px"/><img src="./extras/device-2018-09-24-231341.png" width="200px"/>
+
 **Issue List** (IssueListFragment) - This screen is the second of the two main screens (hosted by MainActivity). This screen displays all of the issues pertaining to the user's currently saved/tracked repositories. This screen also contains a search function in the toolbar to search the issues.
+
 <img src="./extras/device-2018-09-24-230448.png" width="200px"/><img src="./extras/device-2018-09-24-231319.png" width="200px"/>
+
 **Repository Search** (RepositorySearchActivity) - This screen is accessed from the floating action button present on the repository list screen. This screen enables searching Github for repositories and displays search result in a recyclerview list. If a repository is already saved by the user, a green checkmark will appear in it's cardview.
+
 <img src="./extras/device-2018-09-24-231446.png" width="200px"/>
+
 **Repository Detail** (RepositoryDetailActivity) - This screen is accessed by clicking on any repository, either from the repository list screen or from the repository search screen. This screen displays the repository github page within a contained webview. The toolbar also contains buttons to either SAVE the repository to the user's list or to REMOVE it if it's already been added before.
+
 <img src="./extras/device-2018-09-24-231416.png" width="200px"/>
+
 **Issue Detail** (IssueDetailActivity) - This screen is accessed by clicking on any issue within the issue list screen. This screen displays the issue github page within a contained webview.
 
 The whole app is very clean and light. Inspired by Google's latest material design 2 re-design with white/gray/black as the base colors and using other colors to emphasize certain components.

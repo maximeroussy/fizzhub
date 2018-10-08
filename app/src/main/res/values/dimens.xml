@@ -1,0 +1,4 @@
+<resources>
+  <dimen name="repository_count_icon_padding">4dp</dimen>
+  <dimen name="repository_description_padding">4dp</dimen>
+</resources>

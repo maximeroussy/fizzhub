@@ -1,0 +1,32 @@
+<resources>
+  <string name="app_name">FizzHub</string>
+  <string name="repositories">Repositories</string>
+  <string name="issues">Issues</string>
+
+  <string name="empty_repo_list">No repositories are currently added.\n\nPlease click the button below to start adding repositories to your list.</string>
+  <string name="empty_issue_list">No issues found for the current repositories.</string>
+  <string name="empty_repo_search_list">No repositories were found that match the search query.</string>
+  <string name="repository_search_hint">Search</string>
+
+  <string name="repository_count_format">%1$d</string>
+
+  <string name="save">Save</string>
+  <string name="remove">Remove</string>
+  <string name="delete">Delete</string>
+  <string name="search">Search</string>
+  <string name="error">Error</string>
+  <string name="ok">OK</string>
+
+  <string name="issue_number_format">#%1$d</string>
+
+  <string name="repository_search_error">Something went wrong while trying to search for repositories.\n\nPlease try again later.</string>
+  <string name="repository_loading_error">Something went wrong while trying to load your tracked repositories.\n\nPlease try again later.</string>
+  <string name="repository_saving_error">Something went wrong while trying to save the repository.\n\nPlease try again later.</string>
+  <string name="repository_delete_error">Something went wrong while trying to delete the repositories.\n\nPlease try again later.</string>
+  <string name="issue_loading_error">Something went wrong while trying to load issues for currently tracked repositories.\n\nPlease try again later.</string>
+  <string name="issue_search_error">Something went wrong while trying to search issues for currently tracked repositories.\n\nPlease try again later.</string>
+
+  <string name="repository_saved_confirmation">Repository saved.</string>
+  <string name="repository_removed_confirmation">Repository removed.</string>
+
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+    <variable name="viewModel" type="com.maximeroussy.fizzhub.presentation.repositorysearch.RepositorySearchViewModel"/>
+  </data>
+  <android.support.design.widget.CoordinatorLayout
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:layout_gravity="top"
+          android:background="@color/white"
+          android:elevation="4dp"
+          app:contentInsetStartWithNavigation="0dp"
+          app:layout_scrollFlags="scroll|enterAlways|snap">
+
+          <android.support.design.widget.TextInputEditText
+              android:id="@+id/search_edit_text"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="30dp"
+              android:drawableEnd="@drawable/ic_search"
+              android:imeOptions="actionSearch"
+              android:inputType="text">
+            <requestFocus/>
+          </android.support.design.widget.TextInputEditText>
+
+      </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scrollbars="vertical"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/empty_list_text"
+        android:visibility="@{safeUnbox(viewModel.isListEmpty)}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="50dp"
+        android:text="@string/empty_repo_search_list"
+        android:gravity="center"/>
+
+  </android.support.design.widget.CoordinatorLayout>
+</layout>

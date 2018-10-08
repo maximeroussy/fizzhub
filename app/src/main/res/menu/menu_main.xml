@@ -1,0 +1,13 @@
+<menu
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context="com.maximeroussy.fizzhub.MainActivity">
+  <item
+      android:id="@+id/nav_repositories"
+      android:title="@string/repositories"
+      android:icon="@drawable/ic_repository"/>
+  <item
+      android:id="@+id/nav_issues"
+      android:title="@string/issues"
+      android:icon="@drawable/ic_issue"/>
+</menu>

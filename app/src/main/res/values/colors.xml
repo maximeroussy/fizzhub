@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#52B3D9</color>
+  <color name="colorPrimaryDark">#188dba</color>
+  <color name="colorAccent">#f7313e</color>
+
+  <color name="image_placeholder_background">#a3a3a3</color>
+
+  <color name="status_bar_pre_m">#a3a3a3</color>
+  <color name="status_bar_post_m">#dedede</color>
+
+  <color name="bottom_bar_unselected">#898989</color>
+  <color name="bottom_bar_selected">@color/colorPrimaryDark</color>
+
+  <color name="white">#FFFFFF</color>
+  <color name="black">#000000</color>
+  <color name="selected_card_background">#b4b4b4</color>
+
+  <color name="light_grey_text">#a9a9a9</color>
+
+  <color name="open_green">#00780c</color>
+  <color name="closed_red">#c10000</color>
+
+  <color name="issue_date">#8900bf</color>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+    <variable name="issue" type="com.maximeroussy.fizzhub.domain.models.GithubIssue"/>
+  </data>
+
+  <android.support.v7.widget.CardView
+      android:id="@+id/issue_card"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="3dp"
+      android:layout_marginBottom="3dp"
+      android:layout_marginStart="6dp"
+      android:layout_marginEnd="6dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:foreground="?attr/selectableItemBackground"
+      >
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+      <TextView
+          android:id="@+id/issue_title"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="@{issue.title}"
+          android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+          app:layout_constraintEnd_toStartOf="@+id/issue_number"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="Subscription causes crash"
+          />
+
+      <TextView
+          android:id="@+id/issue_number"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@{String.format(@string/issue_number_format, issue.number)}"
+          android:textColor="@color/light_grey_text"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@id/issue_title"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:text="#234"
+          />
+
+      <TextView
+          android:id="@+id/issue_repo_name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:text="@{issue.repoName}"
+          android:textSize="12sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/issue_title"
+          tools:text="maximeroussy/invitrode"
+          />
+
+      <TextView
+          android:id="@+id/issue_body"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/repository_description_padding"
+          android:text="@{issue.body}"
+          android:maxLines="4"
+          android:ellipsize="end"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/issue_repo_name"
+          tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In tellus integer feugiat scelerisque varius morbi. Cras adipiscing enim eu turpis egestas pretium aenean."
+          />
+
+      <TextView
+          android:id="@+id/issue_state"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="@{issue.state}"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/issue_body"
+          tools:text="Open"
+          />
+
+      <TextView
+          android:id="@+id/issue_last_update"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:text="@{issue.lastUpdated}"
+          android:textSize="16sp"
+          android:textStyle="bold"
+          android:textColor="@color/issue_date"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/issue_body"
+          tools:text="2018/09/15"
+          />
+
+    </android.support.constraint.ConstraintLayout>
+  </android.support.v7.widget.CardView>
+</layout>
